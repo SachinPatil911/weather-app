@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App - SkyCast</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1163/1163657.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <div class="weather-card">
+            <div class="search-container">
+                <input type="text" id="cityInput" placeholder="Enter city name" spellcheck="false" autocomplete="off">
+                <button id="searchBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="weather-icon">
+                <img id="weatherIcon" src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="Weather Icon">
+            </div>
+            
+            <div class="weather-info">
+                <h1 class="temperature" id="temp">--°C</h1>
+                <h2 class="city-name" id="city">Enter a City</h2>
+                <p class="description" id="description">Search for weather</p>
+            </div>
+            
+            <div class="weather-details">
+                <div class="detail-item">
+                    <div class="detail-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                        </svg>
+                    </div>
+                    <div class="detail-data">
+                        <span class="humidity" id="humidity">--%</span>
+                        <span class="detail-label">Humidity</span>
+                    </div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"></path>
+                        </svg>
+                    </div>
+                    <div class="detail-data">
+                        <span class="wind-speed" id="windSpeed">-- km/h</span>
+                        <span class="detail-label">Wind Speed</span>
+                    </div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364-.707-.707M6.343 6.343l-.707-.707m12.728 0-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"></path>
+                        </svg>
+                    </div>
+                    <div class="detail-data">
+                        <span class="feels-like" id="feelsLike">--°C</span>
+                        <span class="detail-label">Feels Like</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="error-message" id="errorMessage">
+                <p>City not found. Please try again.</p>
+            </div>
+        </div>
+        
+        <div class="api-key-section">
+            <h3>API Configuration</h3>
+            <div class="api-input-group">
+                <label for="apiKey">OpenWeatherMap API Key:</label>
+                <input type="text" id="apiKeyInput" placeholder="Paste your API key here">
+                <button id="saveApiKey">Save API Key</button>
+            </div>
+            <p class="api-note">Get your free API key from <a href="https://openweathermap.org/api" target="_blank">OpenWeatherMap</a></p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
