@@ -12,7 +12,7 @@ A beautiful, modern weather application using OpenWeatherMap API.
 
 ## How to Get API Key
 
-1. Visit [OpenWeatherMap API](https://openweathermap.org/api)
+1. Visit https://openweathermap.org/api
 2. Sign up for a free account
 3. Navigate to "API Keys" section
 4. Copy your API key
